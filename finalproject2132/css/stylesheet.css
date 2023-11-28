@@ -1,0 +1,362 @@
+head, body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+header {
+  text-align: center;
+  font-size: 40px;
+  color: antiquewhite;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: black;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+#wrapper {
+  padding: 10px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  text-align: center;
+  max-width: 670px;
+}
+
+#playerboard {
+  margin: 10px;
+  padding: 10px;
+  background-color: darkgreen;
+  border-radius: 5px;
+  border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#player-one-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#ai-player-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#profilepicone {
+  height: auto;
+  width: 80px;
+  margin-right: 5px;
+  border-radius: 15px;
+  border: 5px solid darkorange;
+}
+
+#playeronerecord {
+  background-color: darkgreen;
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 15px;
+  border: 5px solid darkorange;
+}
+
+#playeronescore {
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  margin-right: 10px;
+  border-radius: 15px;
+  border: 5px solid darkorange;
+}
+
+#playeronescore > #first-player-score {
+  font-size: 26px;
+}
+
+#playeronescore > p {
+  font-size: 12px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 4px;
+}
+
+#playeronerecord > p {
+  font-size: 12px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 4px;
+}
+
+#playeronerecord > #first-player-round-score {
+  font-size: 26px;
+}
+
+#playeronedetails {
+  display: flex;
+  flex-direction: row;
+}
+
+#gameboard {
+  background-color: darkgreen;
+  padding: 15px;
+  margin: 10px;
+  min-height: 300px;
+  border-radius: 5px;
+  border: 5px solid black;
+}
+
+#playarea {
+  display: flex;
+  flex-direction: row;
+}
+
+#playeronediceroll {
+  background-color: darkolivegreen;
+  opacity: 75%;
+  height: 300px;
+  width: 50%;
+  margin-right: 5px;
+  border-radius: 25px;
+  border: 5px solid darkorange;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#playertwodiceroll {
+  background-color: darkolivegreen;
+  opacity: 75%;
+  height: 300px;
+  height: auto;
+  width: 50%;
+  margin-left: 5px;
+  border-radius: 25px;
+  border: 5px solid darkred;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#firstdiceroll, #seconddiceroll, #thirddiceroll, #fourthdiceroll {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 2px 4px 5px black;
+}
+
+#profilepictwo {
+  height: auto;
+  width: 80px;
+  margin-right: 5px;
+  border-radius: 15px;
+  border: 5px solid darkred;
+}
+
+#playertworecord {
+  width: 80px;
+  height: 80px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 15px;
+  border: 5px solid darkred;
+}
+
+#playertwoscore {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  border-radius: 15px;
+  border: 5px solid darkred;
+}
+
+#playertwoscore > #second-player-score {
+  font-size: 26px;
+}
+
+#playertwoscore > p {
+  font-size: 12px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 4px;
+}
+
+#playertworecord > p {
+  font-size: 12px;
+  color: antiquewhite;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 4px;
+}
+
+#playertworecord > #second-player-round-score {
+  font-size: 26px;
+}
+
+#buttonterminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#roll-button {
+  border-radius: 15px;
+  background-color: lightgreen;
+  width: 62px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#reset-button {
+  border-radius: 15px;
+  background-color: rgb(236, 156, 156);
+  width: 62px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#popup {
+  position: fixed;
+  bottom: 300px;
+  width: 100%;
+  border-top: 10px solid black;
+  border-bottom: 10px solid black;
+  margin-top: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: antiquewhite;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#play-again-btn {
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.rules {
+  text-align: left;
+}
+
+.rules-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+h3 {
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@media screen and (max-width: 650px) {
+  #gameboard {
+    background-color: darkgreen;
+    padding: 15px;
+    margin: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 5px solid black;
+  }
+  #playarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #playerboard {
+    margin: 10px;
+    padding: 10px;
+    background-color: darkgreen;
+    border-radius: 5px;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #player-one-container {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #ai-player-container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #playeroneprofile {
+    padding-right: 1px;
+  }
+  #playertwoprofile {
+    margin-left: 3px;
+  }
+  #playertworecord {
+    margin-left: 10px;
+  }
+  #playeronediceroll {
+    background-color: darkolivegreen;
+    opacity: 75%;
+    height: 110px;
+    width: 80%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 5px solid darkorange;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #playertwodiceroll {
+    background-color: darkolivegreen;
+    opacity: 75%;
+    height: 110px;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 25px;
+    border: 5px solid darkred;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,356 @@
+$primary-font: Verdana, Geneva, Tahoma, sans-serif;
+$background-color: antiquewhite;
+$main-color: darkgreen;
+$accent-color: black;
+$playercolor: darkorange;
+$aicolor: darkred;
+
+head, body {
+    margin: 0;
+    font-family: $primary-font;
+}
+
+body {
+    background-color: $background-color;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+//Border Radius and border Styles
+@mixin border-radius-and-style($radius, $color)
+{
+    border-radius: $radius;
+    border: 5px solid $color;
+}
+
+@mixin flex-container-formatted($direction, $justification, $alignment)
+{
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justification;
+    align-items: $alignment;
+}
+
+
+header {
+    text-align: center;
+    font-size: 40px;
+    color:antiquewhite;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $accent-color;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#wrapper {
+    padding: 10px;
+    margin: 30px;
+    @include flex-container-formatted(column, center, center)
+}
+
+main {
+    text-align: center;
+    max-width: 670px;
+}
+
+// PLAYER ONE STATS
+
+#playerboard {
+    margin: 10px;
+    padding: 10px;
+    background-color: $main-color;
+    @include border-radius-and-style(5px, $accent-color);
+    @include flex-container-formatted(row, center, center);
+}
+
+#player-one-container 
+{
+    @include flex-container-formatted(row, center, center);
+}
+
+#ai-player-container
+{
+    @include flex-container-formatted(row, center, center);
+}
+
+#profilepicone {
+    height: auto;
+    width: 80px;
+    margin-right: 5px;
+    @include border-radius-and-style(15px, $playercolor)
+}
+
+#playeronerecord {
+    background-color: $main-color;
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    @include border-radius-and-style(15px, $playercolor)
+}
+
+#playeronescore {
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 10px;
+    @include border-radius-and-style(15px, $playercolor)
+}
+
+#playeronescore > #first-player-score {
+    font-size: 26px;
+}
+
+#playeronescore > p {
+    font-size: 12px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px $accent-color;
+    margin-top: 4px;
+}
+
+#playeronerecord > p {
+    font-size: 12px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px $accent-color;
+    margin-top: 4px;
+}
+
+#playeronerecord > #first-player-round-score {
+    font-size: 26px;
+}
+
+#playeronedetails {
+    display: flex;
+    flex-direction: row;
+}
+
+// GAMEBOARD
+
+#gameboard {
+    background-color: $main-color;
+    padding: 15px;
+    margin: 10px;
+    min-height: 300px;
+    @include border-radius-and-style(5px, $accent-color)
+}
+
+#playarea {
+    display: flex;
+    flex-direction: row;
+}
+
+#playeronediceroll {
+    background-color: darkolivegreen;
+    opacity: 75%;
+    height: 300px;
+    width: 50%;
+    margin-right: 5px;
+    @include border-radius-and-style(25px, $playercolor);
+    @include flex-container-formatted(row, center, center);
+}
+
+#playertwodiceroll {
+    background-color: darkolivegreen;
+    opacity: 75%;
+    height: 300px;
+    height: auto;
+    width: 50%;
+    margin-left: 5px;
+    @include border-radius-and-style(25px, $aicolor);
+    @include flex-container-formatted(row, center, center);
+}
+
+#firstdiceroll, #seconddiceroll, #thirddiceroll, #fourthdiceroll {
+    border: 2px solid $accent-color;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: 2px 4px 5px $accent-color;
+}
+
+//PLAYER TWO STATS
+
+#profilepictwo {
+    height: auto;
+    width: 80px;
+    margin-right: 5px;
+    @include border-radius-and-style(15px, $aicolor)
+}
+
+#playertworecord {
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-right: 5px;
+    @include border-radius-and-style(15px, $aicolor)
+    
+}
+
+#playertwoscore {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    @include border-radius-and-style(15px, $aicolor)
+}
+
+#playertwoscore > #second-player-score {
+    font-size: 26px;
+}
+
+#playertwoscore > p {
+    font-size: 12px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px $accent-color;
+    margin-top: 4px;
+}
+
+#playertworecord > p {
+    font-size: 12px;
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px $accent-color;
+    margin-top: 4px;
+}
+
+#playertworecord > #second-player-round-score {
+    font-size: 26px;
+}
+
+// PLAY BUTTONS
+
+#buttonterminal {
+    @include flex-container-formatted(column, center, center)
+}
+
+#roll-button {
+    border-radius: 15px;
+    background-color: lightgreen;
+    width: 62px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#reset-button {
+    border-radius: 15px;
+    background-color: rgb(236, 156, 156);
+    width: 62px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#popup {
+    position: fixed;
+    bottom: 300px;
+    width: 100%;
+    border-top: 10px solid $accent-color;
+    border-bottom: 10px solid $accent-color;
+    margin-top: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: antiquewhite;
+    color: $accent-color;
+    @include flex-container-formatted(column, center, center)
+}
+
+#play-again-btn {
+    border-radius: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.rules {
+    text-align: left;
+}
+
+.rules-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+h3 {
+    text-align: center;
+    user-select: none;
+}
+
+@media screen and (max-width: 650px)
+{
+    #gameboard 
+    {
+        background-color: $main-color;
+        padding: 15px;
+        margin: 10px;
+        height: 10px;
+        @include border-radius-and-style(5px, $accent-color)
+    }
+
+    #playarea 
+    {
+        @include flex-container-formatted(column, center, center);
+    }
+
+    #playerboard 
+    {
+        margin: 10px;
+        padding: 10px;
+        background-color: $main-color;
+        @include border-radius-and-style(5px, $accent-color);
+        @include flex-container-formatted(column, center, center);
+    }
+    
+    #player-one-container 
+    {
+        padding-bottom: 10px;
+        @include flex-container-formatted(row, center, center);
+    }
+
+    #ai-player-container
+    {
+        padding-top: 10px;
+        @include flex-container-formatted(row, center, center);
+    }
+
+    #playeroneprofile
+    {
+        padding-right: 1px;
+    }
+
+    #playertwoprofile
+    {
+        margin-left: 3px;
+    }
+
+    #playertworecord
+    {
+        margin-left: 10px;
+    }
+
+    #playeronediceroll {
+        background-color: darkolivegreen;
+        opacity: 75%;
+        height: 110px;
+        width: 80%;
+        margin-bottom: 10px;
+        @include border-radius-and-style(25px, $playercolor);
+        @include flex-container-formatted(row, center, center);
+    }
+
+    #playertwodiceroll {
+        background-color: darkolivegreen;
+        opacity: 75%;
+        height: 110px;
+        width: 80%;
+        margin-top: 10px;
+        @include border-radius-and-style(25px, $aicolor);
+        @include flex-container-formatted(row, center, center);
+    }
+}

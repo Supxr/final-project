@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>COMP 2132 | Final Project</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" media="all">
+
+        <script src="../scripts/finalproject.js" defer></script>
+    </head>
+    <body>
+        <header>FINAL PROJECT | DICE GAME</header>
+        
+        <div id="wrapper">
+            <main>
+                <h1>Welcome to Dice Game!</h1>
+                <div id="playerboard">
+                    <div id="player-one-container">
+                        <div id="playeroneprofile">
+                            <img src="../images/myAvatar.png" alt="profile picture" id="profilepicone">
+                        </div>
+                        <div id="playeronerecord">
+                            <p>round total:</p>
+                            <p id="first-player-round-score">[score goes here]</p>
+                        </div>
+                        <div id="playeronescore">
+                            <p>score:</p>
+                            <p id="first-player-score">[score goes here]</p>
+                        </div>
+                    </div>
+
+                    <div id="ai-player-container">
+                        <div id="playertwoscore">
+                            <p>score:</p>
+                            <p id="second-player-score">[score goes here]</p>
+                        </div>
+                        <div id="playertworecord">
+                            <p>round total:</p>
+                            <p id="second-player-round-score">[score goes here]</p>
+                        </div>
+                        <div id="playertwoprofile">
+                            <img src="../images/AIProfile.png" alt="computerprofile" id="profilepictwo">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="gameboard">
+                    <div id="playarea">
+                        <div id="playeronediceroll">
+                            <p id="player-one-id">Player One</p>
+                            <img id="firstdiceroll" src="../images/dice-1.png" alt="first dice png">
+                            <img id="seconddiceroll" src="../images/dice-2.png" alt="second dice png">
+                        </div>
+                        <div id="buttonterminal">
+                            <button type="button" value="play" id="roll-button">
+                                ROLL
+                            </button>
+        
+                            <button type="button" value="reset" id="reset-button">
+                                RESET
+                            </button>
+                        </div>
+                        <div id="playertwodiceroll">
+                            <p id="ai-player-id">AI Player</p>
+                            <img id="thirddiceroll" src="../images/dice-3.png" alt="third dice png">
+                            <img id="fourthdiceroll" src="../images/dice-4.png" alt="fourth dice png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rules">
+                    <h3>Click to Show Game Rules</h3>
+                    <hr>
+                    <div class="rules-content">
+                        <ul>
+                            <li>Every round, a pair of dice is rolled for each player using the “ROLL” button</li>
+                            <li>The sum of the two dice will be the player's round score</li>
+                            <li>If any of the two dice on either player's board is a 1 then that player's round score is 0 (eg: if the player rolls a 6 and 1, they get a round score of 0)</li>
+                            <li>If the two dice roll the same number, then the numbers are added, then doubled (eg: if the player rolls 2 and 2, they get a score of (2 + 2) * 2 = 8)</li>
+                            <li>The round score is added to the total score for three rounds</li>
+                            <li>The player with the highest total score after three rounds wins the game</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <aside id="popup">
+            <h3 id="announcement">Winner is....</h3>
+            <input type="button" id="play-again-btn" name ="Play Again" value="PLAY AGAIN!">
+        </aside>
+
+        <footer>
+            <hr>
+            <a href="mailto:jlagman4@my.bcit.ca">Jezer Lagman</a> |
+            <a href="https://www.linkedin.com/in/erik-lagman/">Connect with me</a> |
+            <a href="#top">[TOP]</a>
+        </footer>
+    </body>
+</html>
